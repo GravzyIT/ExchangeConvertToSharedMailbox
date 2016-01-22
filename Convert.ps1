@@ -32,6 +32,7 @@ $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri ht
 Import-PSSession $Session # Imports the session and connects.
 Get-Mailbox $uname | Set-Mailbox –ProhibitSendReceiveQuota 5GB –ProhibitSendQuota 4.75GB –IssueWarningQuota 4.5GB –type shared # Sets the mailbox to shared.
 Write-Host "$uname converted to a Shared Mailbox." # Confirms to user.
+Remove-PSSession $Session
 pause
 }
 
