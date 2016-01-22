@@ -25,7 +25,7 @@ If($answer1 -eq 1) #If statement, Yes = 0 and No = 1, 1 would mean the user made
  }
 }
 
-function ConvertToShared # Sets a random password. (Should be secure now as our current method is guessable.)
+function ConvertToShared 
 {
 $UserCredential = Get-Credential # Get admin details for Exchange.
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $UserCredential -Authentication Basic -AllowRedirection # Store a session using credentials.
