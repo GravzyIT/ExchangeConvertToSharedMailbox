@@ -1,5 +1,5 @@
 # Author: Kieran Graves || https://twitter.com/GravzyIT
-function UserDetails #This is the function that collects the User data from IT Staff (maybe let robotechnician do it?)
+function UserDetails #This is the function that collects the User data from the user.
 {
 $global:uname = Read-Host 'What is the email address of the user?' #Self Explanatory.
 write-host "You want to convert $uname to a Shared Mailbox." # Reads back the email.
